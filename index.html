@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Score Keeper</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>
-      <span id="player-1-display">0</span> to
-      <span id="player-2-display">0</span>
-    </h1>
-    <div>
-      <p>Play to</p>
-      <select id="play-to">
-        <option value="" disabled selected hidden>Select</option>
-        <option value="3">3</option>
-        <option value="5">5</option>
-        <option value="7">7</option>
-        <option value="9">9</option>
-        <option value="12">12</option>
-      </select>
+    <div class="container">
+      <div class="image">
+        <img src="./pic/table-tennis.jpg" alt="table-tennis" />
+      </div>
+      <div class="title"><p>Table tennis Score Keeper</p></div>
+      <div class="score-container">
+        <div class="score-display">
+          <span id="player-1-display">0</span> to
+          <span id="player-2-display">0</span>
+        </div>
+        <p class="score-suggest">Use the buttons below to keep score</p>
+        <div class="score-select">
+          <p>Playing To</p>
+          <select id="play-to">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="all-buttons">
+          <button id="player-1-btn">+ Player One</button>
+          <button id="player-2-btn">+ Player Two</button>
+          <button id="reset-btn">reset</button>
+        </div>
+      </div>
     </div>
-    <button id="player-1-btn">+ player one</button>
-    <button id="player-2-btn">+ player two</button>
-    <button id="reset-btn">reset</button>
+
     <script src="./app.js"></script>
   </body>
 </html>

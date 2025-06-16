@@ -29,6 +29,9 @@ player1Btn.addEventListener("click", function () {
     // 4.4 ถ้าคะแนนถึง winning score ที่เราตั้งไว้แล้ว จะไม่สามารถกดต่อได้ ก็คือให้ค่าเป็น true
     if (player1Score == winningScore) {
       isGameover = true;
+      // 10. ทำให้การแสดงผลคะแนนเปลี่ยนเมื่อจบเกม ผู้ชนะ เลขจะเปลี่ยนเป็นสีเขียว ผู้แพ้ เลขจะเปลี่ยนเป็นสีแดง
+      player1Display.style.color = "green";
+      player2Display.style.color = "red";
     }
   }
   player1Display.textContent = player1Score; // 3.4 นำคะแนนของ player 1 แสดงผลลงไป
@@ -40,6 +43,9 @@ player2Btn.addEventListener("click", function () {
     player2Score = player2Score + 1; // 3.5 เมื่อคลิก ให้ที่เก็บคะแนนของ player 2 เพิ่มขึ้นทีละ 1
     if (player2Score == winningScore) {
       isGameover = true;
+      //   11. ใส่ค่าให้ทั้งปุ่มผู้เล่น 1 และ 2
+      player2Display.style.color = "green";
+      player1Display.style.color = "red";
     }
   }
   player2Display.textContent = player2Score; //3.6 นำคะแนนของ player แสดงผลลงไป
@@ -62,4 +68,7 @@ function reset() {
   player2Score = 0; // ทำให้ค่ากลับมาเป็น 0 เหมือนเดิม
   player1Display.textContent = player1Score; // ให้การแสดงผลเท่ากับค่า 0 ตามที่เราเซตไว้
   player2Display.textContent = player2Score; // ให้การแสดงผลเท่ากับค่า 0 ตามที่เราเซตไว้
+  // 12. เปลี่ยนให้สีที่แสดงผลกลับไปเป็นสีดำเหมือนเดิมตอนถูก reset
+  player1Display.style.color = "initial";
+  player2Display.style.color = "initial";
 }

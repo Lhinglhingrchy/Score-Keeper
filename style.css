@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  width: 100%;
+}
+.image img {
+  width: 100%;
+}
+.title {
+  /* border: solid 1px; */
+  padding: 10px 15px;
+}
+.title p {
+  font-size: 20px;
+  font-weight: 800;
+}
+.score-container {
+  /* border: solid 1px; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.score-display,
+.score-suggest,
+.score-select {
+  padding-left: 15px;
+}
+.score-display {
+  /* border: solid 1px; */
+  font-size: 48px;
+  font-weight: 800;
+  padding-top: 15px;
+}
+.score-suggest {
+  font-size: 17px;
+  font-weight: 600;
+}
+.score-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.score-select p {
+  font-size: 20px;
+  font-weight: 800;
+}
+.score-select select {
+  padding: 0 5px;
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+}
+.all-buttons {
+  display: flex;
+  /* border: solid 1px; */
+}
+.all-buttons button {
+  color: white;
+  border: none;
+  padding: 12px 0px;
+  border-radius: 3px;
+  font-size: 18px;
+}
+#player-1-btn {
+  background-color: #12e2a8;
+  width: 35%;
+}
+#player-2-btn {
+  background-color: #2a8bcf;
+  width: 35%;
+}
+#reset-btn {
+  background-color: #df275b;
+  width: 30%;
+}
