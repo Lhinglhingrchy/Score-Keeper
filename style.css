@@ -4,6 +4,12 @@
   margin: 0;
   font-family: "Nunito", sans-serif;
 }
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container {
   width: 100%;
 }
@@ -11,7 +17,6 @@
   width: 100%;
 }
 .title {
-  /* border: solid 1px; */
   padding: 10px 15px;
 }
 .title p {
@@ -19,7 +24,6 @@
   font-weight: 800;
 }
 .score-container {
-  /* border: solid 1px; */
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -30,7 +34,6 @@
   padding-left: 15px;
 }
 .score-display {
-  /* border: solid 1px; */
   font-size: 48px;
   font-weight: 800;
   padding-top: 15px;
@@ -58,7 +61,6 @@
 }
 .all-buttons {
   display: flex;
-  /* border: solid 1px; */
 }
 .all-buttons button {
   color: white;
@@ -78,4 +80,86 @@
 #reset-btn {
   background-color: #df275b;
   width: 30%;
+}
+
+/* responsive */
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 65%;
+    margin-top: 40px;
+    box-shadow: 2px 8px 23px -5px rgba(0, 0, 0, 0.46);
+  }
+  .image img {
+    height: 280px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 55%;
+  }
+  .image img {
+    height: 290px;
+  }
+  .title p {
+    font-size: 25px;
+  }
+  .score-display,
+  .score-suggest,
+  .score-select,
+  .title {
+    padding-left: 30px;
+  }
+  .score-display {
+    font-size: 53px;
+    padding-top: 10px;
+  }
+  .score-suggest {
+    font-size: 20px;
+  }
+  .score-select p {
+    font-size: 25px;
+  }
+  .score-select select {
+    width: 80px;
+  }
+  .all-buttons button {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 40%;
+  }
+  .score-display,
+  .score-suggest,
+  .score-select,
+  .title {
+    padding-left: 25px;
+  }
+  .all-buttons button {
+    font-size: 22px;
+  }
+  .title p {
+    font-size: 28px;
+  }
+  .score-display {
+    font-size: 57px;
+  }
+  .score-suggest {
+    font-size: 24px;
+  }
+  .score-select p {
+    font-size: 28px;
+  }
+  .score-select select {
+    width: 88px;
+    height: 42px;
+  }
+  .all-buttons button {
+    font-size: 20px;
+  }
 }
